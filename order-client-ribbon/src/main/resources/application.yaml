@@ -1,0 +1,17 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: order-client-ribbon
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

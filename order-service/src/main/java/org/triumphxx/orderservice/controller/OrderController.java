@@ -6,8 +6,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import org.triumphxx.orderservice.service.OrderService;
 
 /**
  * @author:triumphxx
@@ -19,14 +18,10 @@ import java.util.List;
 public class OrderController {
 
     @Autowired
-    private DiscoveryClient client;
+    OrderService orderService;
 
     @RequestMapping(value = "/info", method = RequestMethod.GET)
     public String index() {
-        List<ServiceInstance> instances = client.getInstances("order-service");
-        for (int i = 0; i < instances.size(); i++) {
-            System.out.println("/info,host:" + instances.get(i).getHost() + ",service_id:" + instances.get(i).getServiceId());
-        }
-        return "Hello World";
+        return orderService.queryOrderInfo();
     }
 }
