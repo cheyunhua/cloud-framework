@@ -19,6 +19,6 @@ public class ClientController {
 
     @RequestMapping(value = "/info",method = RequestMethod.GET)
     public String queryOrderInfo(){
-        return clientService.queryOrderInfo();
+        return "restTemplate访问服务提供者返回的信息:"+clientService.queryOrderInfo();
     }
 }

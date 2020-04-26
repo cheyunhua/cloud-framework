@@ -19,6 +19,7 @@ public class ClientService {
 
     @HystrixCommand(fallbackMethod = "error")
     public String queryOrderInfo(){
+        System.out.println("通过restTemplate访问服务提供者");
         return restTemplate.getForEntity("http://ORDER-SERVICE/info", String.class).getBody();
     }
 

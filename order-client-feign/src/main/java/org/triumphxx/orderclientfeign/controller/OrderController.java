@@ -19,6 +19,7 @@ public class OrderController {
 
     @RequestMapping(value = "query",method = RequestMethod.GET)
     public String getInfo(){
-        return orderService.info();
+        System.out.println("通过FeignClient方式调用服务提供者");
+        return "FeignClient调用服务提供者返回的信息："+orderService.info();
     }
 }

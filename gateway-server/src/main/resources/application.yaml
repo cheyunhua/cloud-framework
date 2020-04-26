@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+zuul:
+  routes:
+    order-client-ribbon:
+      path: /api-ribbon/**
+    order-client-feign:
+      path: /api-feign/**
