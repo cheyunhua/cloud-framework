@@ -17,3 +17,5 @@
  * 服务提供者，提供查询订单信息
 #### `hystrix-dashboard`
  * 服务熔断降级监控面板
+#### `config-server`
+ * 配置中心
