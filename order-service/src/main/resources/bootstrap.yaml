@@ -10,5 +10,9 @@ spring:
       label: master
       # 配置中心地址
       uri: http://localhost:9001/
+      # 访问配置中心的用户名
+      username: triumphxx
+      # 访问配置中心的密码
+      password: 123
 server:
   port: 9002

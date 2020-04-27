@@ -23,11 +23,11 @@ public class ConfigClientTestController {
     Environment env;
 
     @RequestMapping("/test")
-    public String sang() {
+    public String test() {
         return this.type;
     }
     @RequestMapping("/test1")
-    public String sang2() {
-        return env.getProperty("triumphxx.wang", "未定义");
+    public String test2() {
+        return env.getProperty("triumphxx.yu", "未定义");
     }
 }

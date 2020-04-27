@@ -15,4 +15,7 @@ spring:
           username: triumphxx@163.com
           # git 仓库的密码
           password: 你的密码
-
+  security:
+    user:
+      name: triumphxx
+      password: 123
