@@ -7,8 +7,12 @@ spring:
     config:
       server:
         git:
+          # 配置文件的所在仓库地址
           uri: https://github.com/triumphxx/config.git
+          # 配置文件可查询目录
           search-paths: config-repo
+          # git仓库的用户名
           username: triumphxx@163.com
-          password: wyphdx126321
+          # git 仓库的密码
+          password: 你的密码
 

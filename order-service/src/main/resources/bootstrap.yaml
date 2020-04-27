@@ -1,12 +1,14 @@
-
-
 spring:
   application:
+    # 配置文件的名称
     name: application
   cloud:
     config:
+      # 配置文件的针对的环境
       profile: test
+      # 配置文件所在的仓库的分支
       label: master
+      # 配置中心地址
       uri: http://localhost:9001/
 server:
   port: 9002
