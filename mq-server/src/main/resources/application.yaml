@@ -1,0 +1,10 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: mq-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: triumphxx
+    password: 199332
