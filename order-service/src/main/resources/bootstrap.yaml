@@ -5,7 +5,7 @@ spring:
   cloud:
     config:
       # 配置文件的针对的环境
-      profile: test
+      #profile:
       # 配置文件所在的仓库的分支
       label: master
       # 配置中心地址
@@ -35,6 +35,4 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-management:
-  security:
-    enabled: false
+

@@ -1,3 +1,4 @@
+
 server:
   port: 9001
 spring:
@@ -14,12 +15,24 @@ spring:
           # git仓库的用户名
           username: triumphxx@163.com
           # git 仓库的密码
-          password: 你的密码
+          password: wyphdx126321
+    loadbalancer:
+      ribbon:
+        enabled: false
   security:
     user:
       name: triumphxx
       password: 123
+      # 配置mq的连接信息
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: 123
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+
+
