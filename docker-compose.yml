@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  eureka-server:
+    image: cloud-framework/eureka:1.0
+    container_name: cloud_eureka
+    hostname: EurekaServer
+    ports:
+      - "8761:8761"
+    networks:
+      - cloudnetwork
+  order-server:
+    image: cloud-framework/order-service:1.0
+    container_name: cloud_order-server
+    ports:
+      - "8081:8081"
+    links:
+      - eureka-server:EurekaServer
+    networks:
+      - cloudnetwork
+    depends_on:
+      - eureka-server
+  order-client:
+    image: cloud-framework/order-client-feign:1.0
+    container_name: cloud_order-client
+    ports:
+      - 9001:9001
+    links:
+      - eureka-server:EurekaServer
+    networks:
+      - cloudnetwork
+    depends_on:
+      - eureka-server
+
+networks:
+  cloudnetwork:
+    driver: bridge

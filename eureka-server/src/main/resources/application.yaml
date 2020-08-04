@@ -4,7 +4,7 @@ server:
 eureka:
   # 设置Eureka的hostname
   instance:
-    hostname: locahost
+    hostname: EurekaServer
   # 设置不检索其他服务
   client:
     fetch-registry: false
@@ -12,4 +12,4 @@ eureka:
     register-with-eureka: false
   # 服务注册地址
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://EurekaServer:${server.port}/eureka/
